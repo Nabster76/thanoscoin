@@ -1,0 +1,811 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  img {
+    width: 100%;
+  }
+  body {
+    background-color: #0b0712;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    margin-top: 80px;
+    line-height: 1.4;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .header-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    padding: 10px 20px;
+    align-items: center;
+    max-width: 1240px;
+      margin: 0 auto;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    column-gap: 10px;
+    font-family: 'Montserrat';
+    color: #fff;
+    text-decoration: none;
+  }
+  .menu {
+    text-align: right;
+  }
+  .menu ul a, .menu ul span {
+    font-size: 16px;
+    padding: 10px 0px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+  }
+  .logo img {
+    max-width: 60px;
+  }
+  svg {
+    width: 100%;
+  }
+  .header-wrap {
+    width: 100%;
+    left: 0;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    background-color: #0b0712;
+  }
+  ul.navigation {
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+    align-items: center;
+    column-gap: 25px;
+  }
+  ul.navigation li {
+  position: relative;
+  }
+  p {
+    font-size: 18px;
+  }
+  .banner-col1 img {
+    max-width: 65vw;
+    margin: 0 auto;
+    display: block;
+  }
+  .banner-col1 h1 {
+    font-size: 5.2vw;
+    color: #e1daf0;
+    text-align: center;
+    font-weight: 100;
+    margin: 20px 20px;
+  }
+  img.round-1 {
+    position: absolute;
+    top: -10%;
+    right: 28%;
+    max-width: 45vw;
+    animation: rotate 80s normal linear infinite;
+    z-index: -1;
+  }
+  img.round-2 {
+    position: absolute;
+    top: 30%;
+    right: 20vw;
+    max-width: 15vw;
+    animation: rotate 30s normal linear infinite;
+  }
+  img.round-3 {
+    position: absolute;
+    top: 30%;
+    left: 20vw;
+    max-width: 15vw;
+    animation: rotate 30s normal linear infinite;
+  }
+  .about-thanos-row {
+    grid-template-columns: 40% 50%;
+    display: grid;
+    column-gap: 10%;
+    align-items: center;
+  }
+  
+  .thanos-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .about-thanos-col2 h2 {
+    color: #0b0712;
+    font-size: 80px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  
+  section.about-thanos {
+    background-color: #e1daf0;
+    padding: 0 20px;
+  }
+  
+  .about-thanos-col1 img {
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .about-thanos-col2 p {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  
+  .banner-col1 {
+    position: relative;
+    overflow: hidden;
+  }
+  .thanos-token-row {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    max-width: 1020px;
+    margin: 100px auto;
+    border: 1px solid #e1daf0;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 5px 5px 30px -15px #e1daf0;
+  }
+  .thanos-token-col1 {
+    color: #fff;
+    padding: 30px;
+  }
+  
+  .thanos-token-col2 {
+    display: flex;
+  }
+  
+  .thanos-token-col1 h2 {
+    color: #e1daf0;
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  
+  .thanos-token-row p {color: #e1daf0;line-height: 1.4;}
+  .thanos-contract {
+    background-color: #e1daf0;
+    padding: 100px 0;
+  }
+  
+  .thanos-contract-row {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 5%;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .contract-block {
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px -10px #0b0712;
+    padding: 30px 20px;
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    column-gap: 20px;
+    align-items: center;
+    border: 2px solid;
+  }
+  
+  .thanos-contract-col1 img {
+    animation: 15s linear 0s infinite alternate tilt;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px -15px #0b0712;
+  }
+  .thanos-contract-row > h2 {
+    grid-column: 3 span;
+    color: #0b0712;
+    font-size: 48px;
+    font-weight: 300;
+    margin: 0 0 30px;
+    text-align: center;
+  }
+  .contract-block b {
+    font-weight: 300;
+    display: block;
+    color: #0b0712;
+    font-size: 24px;
+  }
+  
+  .contract-block p {
+    color: #0b0712;
+    line-height: 1.4;
+  }
+  .thunder1 {
+    position: absolute;
+    right: -8%;
+    bottom: 50px;
+    max-width: 30%;
+    transform: rotate(45deg);
+    animation: 5s linear 0s infinite alternate tilt;
+    z-index: -1;
+  }
+  .thunder2 {
+    position: absolute;
+    left: -9%;
+    bottom: 90px;
+    max-width: 30%;
+    transform: rotate(45deg);
+    animation: 5s linear 0s infinite alternate tilt;
+    z-index: -1;
+  }
+  
+  .thunder2 img {
+    transform: rotate(135deg);
+  }
+  
+  .thunder1 img {transform: rotate(45deg);}
+  .supply-thanos-row {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    column-gap: 2%;
+    align-items: start;
+  }
+  
+  .supply-thanos-title {
+    grid-column: 3 span;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .supply-thanos-title h2 {
+  color: #e1daf0;
+  font-size: 80px;
+  font-weight: 300;
+  text-align: center;
+  }
+  
+  .supply-thanos-title p {
+    font-size: 24px;
+    color: #e1daf0;
+  }
+  
+  iframe {
+    width: 100%;
+  }
+  .supply-thanos-col1, .supply-thanos-col3 {
+    color: #e1daf0;
+  }
+  
+  .supply-thanos {
+    padding: 100px 20px;
+  }
+  
+  .supply-thanos-col2 img {
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .supply-thanos-col1 h2 , .supply-thanos-col3 h2 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    display: block;
+    overflow-wrap: break-word;
+  }
+  .roadmap-box {
+    border-radius: 30px;
+    box-shadow: 2px 2px 20px -10px #e1daf0;
+    padding: 20px;
+    margin: 30px 0;
+  }
+  
+  .roadmap-box h4 {
+    font-size: 24px;
+    font-weight: 300;
+  }
+  
+  .roadmap-box ul {
+    margin: 0 0px 0 20px;
+  }.supply-thanos-col1 p {
+    margin-bottom: 30px;
+  }
+  .contract-block img {animation: 10s linear 0s infinite alternate zoom;}
+  .contract-2 {
+    border-color: #266ef6;
+    box-shadow: 5px 5px 30px -10px #266ef6;
+  }
+  .contract-5 {
+    border-color: #12e772;
+    box-shadow: 5px 5px 30px -10px #12e772;
+  }
+  .contract-6 {
+    border-color: #ffd300;
+    box-shadow: 5px 5px 30px -10px #ffd300;
+  }
+  .contract-3 {
+    border-color: #ff0130;
+    box-shadow: 5px 5px 30px -10px #ff0130;
+  }
+  .contract-4 {
+    border-color: #ff8b00;
+    box-shadow: 5px 5px 30px -10px #ff8b00;
+  }
+  .contract-1 {
+    border-color: #e429f2;
+    box-shadow: 5px 5px 30px -10px #e429f2;
+  }
+  .loader-site {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e1daf0;
+    z-index: 999;
+  }
+  
+  .loader-site img {
+    max-width: 180px;
+  }
+  .footer-row {
+    display: grid;
+    grid-template-columns: 30% 36% 30%;
+    align-items: center;
+    column-gap: 2%;
+  }
+  
+  .footer-col1 ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    column-gap: 20px;
+  }
+  
+  .footer-col1 a {
+    color: #0b0712;
+    font-size: 40px;
+  }
+  
+  .footer-wrap {
+    padding: 60px 20px 20px;
+    background-color: #e1daf0;
+  }
+  .footer-col2 .logo img {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  .footer-row2 p {
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .footer-row2 {
+    padding-top: 30px;
+  }
+  .footer-col3 h2 {
+    font-weight: 300;
+    text-align: center;
+    font-size: 2vw;
+  }
+  .thanos-token {
+    padding: 0 20px;
+  }
+  .how-buy-thanos-row {
+    display: grid;
+    grid-template-columns: 65% 30%;
+    column-gap: 5%;
+  }
+  
+  .how-buy-thanos-row > h2 {
+    grid-column: 2 span;
+    color: #e1daf0;
+    font-size: 80px;
+    font-weight: 300;
+    margin: 0 0 30px;
+    text-align: center;
+  }
+  
+  .how-buy-box {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    color: #e1daf0;
+    border: 1px solid #e1daf0;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 5px 5px 30px -15px #e1daf0;
+    padding: 20px;
+  }
+  
+  .how-buy-box img {
+    grid-row: span 3;
+    padding: 20px;
+  }
+  
+  .how-buy-thanos {
+    padding: 60px 20px 0 20px;
+  }
+  
+  .how-buy-thanos-col1 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  
+  .how-buy-box h4 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  .how-buy-thanos-col2 img {
+    animation: 15s linear 0s infinite alternate tilt;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px -15px #e1daf0;
+  }
+  * {
+      scrollbar-width: auto;
+      scrollbar-color: #8f54a0 #ffffff;
+    }
+    *::-webkit-scrollbar {
+      width: 10px;
+    }
+  
+    *::-webkit-scrollbar-track {
+      background: #ff000000;
+    }
+  
+    *::-webkit-scrollbar-thumb {
+      background-color: #8f54a0;
+      border-radius: 5px;
+    }
+    .copy-code {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin-top: 20px;
+  }
+  
+  span#text-to-copy {
+      border: 1px solid #0b0712;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      font-size: 18px;
+  }
+  
+  button.copy-btn {
+      background-color: #0b0712;
+      font-size: 24px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 5px 5px 30px -15px #0b0712;
+      color: #e1daf0;
+  }
+  
+  .copied , .active .not-copy {
+      display: none;
+  }
+  
+  .active .copied {
+      display: block;
+  }
+  
+  a.thanos-btn {
+      background-color: #0b0712;
+      font-size: 24px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 5px 5px 30px -15px #0b0712;
+      color: #e1daf0;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px 0px;
+  }
+  
+  
+  
+  @keyframes zoom {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.2, 1.2);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  @keyframes tilt {
+    0%, 100% {
+      transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+    }
+    20% {
+      transform: perspective(300px) rotateX(2deg) rotateY(3deg);
+    }
+    30% {
+      transform: perspective(300px) rotateX(6deg) rotateY(2deg);
+    }
+    50% {
+      transform: perspective(300px) rotateX(3deg) rotateY(4deg);
+    }
+    70% {
+      transform: perspective(300px) rotateX(0deg) rotateY(2deg);
+    }
+    80% {
+      transform: perspective(300px) rotateX(2deg) rotateY(1deg);
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+    25% {
+      -webkit-transform: rotate3d(0, 0, 1, 90deg);
+      transform: rotate3d(0, 0, 1, 90deg);
+    }
+    50% {
+      -webkit-transform: rotate3d(0, 0, 1, 180deg);
+      transform: rotate3d(0, 0, 1, 180deg);
+    }
+    75% {
+      -webkit-transform: rotate3d(0, 0, 1, 270deg);
+      transform: rotate3d(0, 0, 1, 270deg);
+    }
+    100% {
+      -webkit-transform: rotate3d(0, 0, 1, 360deg);
+      transform: rotate3d(0, 0, 1, 360deg);
+    }
+    }
+    
+  @media (max-width:768px) {
+  .header-row {
+    padding: 10px 30px;
+    position: relative;
+  }
+  .menu-btn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    margin: 6px 0;
+  }
+  .menu-btn {
+    width: 50px;
+    margin: 0 0 0 auto;
+    padding: 0 10px;
+  }
+  ul.navigation {
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+    padding: 10px 20px 40px 20px;
+    row-gap: 20px;
+    border-bottom: 1px solid #fff;
+  }
+  .menu {
+    position: absolute;
+    top: 100%;
+    background-color: #000;
+    width: 100%;
+    display: none;
+  }
+  ul.navigation > li > a {
+    padding: 0;
+  }
+  .dropdown-menu { 
+    display:  none; 
+  }
+  ul.navigation li.has-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-position: 100% 18px;
+    padding: 0;
+  }
+  ul.sub-menu li a {
+      color: #000;
+  }
+  .logo {
+    justify-content: center;
+  }
+  .about-thanos-col2 h2 {
+    font-size: 38px;
+  }
+  
+  .about-thanos-row {
+    grid-template-columns: 100%;
+  }
+  
+  .thanos-token-col1 h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .thanos-token-row {
+    grid-template-columns: 100%;
+    margin: 40px 0;
+  }
+  
+  .thanos-contract-row {
+    grid-template-columns: 100%;
+  }
+  
+  .supply-thanos-row > h2 {
+    font-size: 38px;
+    grid-column: 1;
+    margin-bottom: 10px;
+  }
+  
+  .supply-thanos-row {
+    grid-template-columns: 100%;
+  }
+  
+  .footer-row {
+    grid-template-columns: 100%;
+  }
+  
+  .banner-col1 h1 {
+    font-size: 34px;
+  }
+  
+  .banner-col1 img {
+    max-width: 80vw;
+  }
+  
+  img.round-1 {
+    max-width: 45vw;
+    top: 30%;
+  }
+  
+  img.round-2 {
+    max-width: 25vw;
+    top: 40%;
+    right: 10vw;
+  }
+  
+  img.round-3 {max-width: 25vw;top: 40%;left: 10vw;}
+  
+  .thunder1 {
+    max-width: 50%;
+  }
+  
+  .thunder2 {
+    max-width: 50%;
+    left: -11%;
+    bottom: 50px;
+  }
+  
+  .about-thanos-col1 img {
+    max-width: 120px;
+    margin: 0;
+  }
+  
+  section.about-thanos {
+    padding: 0px 20px 40px;
+  }
+  .about-thanos-col2 p {
+    font-size: 18px;
+  }
+  
+  .thanos-token-col1 {
+    padding: 0 20px 20px;
+    grid-row: 2;
+  }
+  
+  .thanos-token-col2 img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .thanos-contract {
+    padding: 20px 0;
+  }
+  
+  .contract-block b {
+    font-size: 20px;
+  }
+  
+  .contract-block {
+    grid-template-columns: 45px 1fr;
+    column-gap: 20px;
+  }
+  
+  .thanos-contract-col2 img {
+    max-width: 60%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .supply-thanos {
+    padding: 40px 20px;
+  }
+  
+  .supply-thanos-col1 h2, .supply-thanos-col3 h2 {
+    font-size: 24px;
+  }
+  
+  .supply-thanos-col2 img {
+    height: auto;
+  }
+  
+  .footer-wrap {
+    padding: 40px 20px;
+  }
+  
+  .footer-col1 a {
+    font-size: 30px;
+  }
+  
+  .footer-col2 .logo img {
+    max-width: 150px;
+    margin: 10px auto;
+  }
+  
+  .footer-col3 h2 {
+    font-size: 24px;
+  }
+  .how-buy-thanos-row > h2 {
+    grid-column: 1;
+    font-size: 38px;
+  }
+  
+  .how-buy-thanos-row {
+    grid-template-columns: 100%;
+  }
+  
+  .how-buy-thanos-col2 img {
+    max-width: 50%;
+    margin: 60px auto 20px;
+    display: block;
+  }
+  
+  .how-buy-box {
+    grid-template-columns: 100%;
+  }
+  
+  .how-buy-box img {
+    grid-row: 1;
+    max-width:  80px;
+    padding: 0 0 10px;
+  }
+  
+  .how-buy-thanos {
+    padding-top: 40px;
+  }
+  .thanos-contract-row > h2 {
+    grid-column: 1;
+    font-size: 28px;
+  }
+  
+  span#text-to-copy {
+    font-size: 14px;
+  }
+  
+  button.copy-btn , a.thanos-btn {
+    font-size: 16px;
+  }
+  .supply-thanos-title h2 {
+    font-size: 38px;
+  }
+  
+  .supply-thanos-title {
+    grid-column: 1;
+  }
+  
+  .thanos-contract-col3 .contract-block {
+    margin-top: 0;
+  }
+  }
+    
